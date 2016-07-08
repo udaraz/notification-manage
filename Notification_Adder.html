@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Simple Notification Adder</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.1/css/bootstrap-datepicker.min.css" rel="stylesheet">
+        <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+        
+        
+    </head>
+    <body>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <div class="text-right">
+                    <br><br>
+                <button class=" btn btn-primary" data-toggle="modal" data-target="#myModal" id="add"><i class="fa fa-plus-circle"></i> Add</button>
+                <br><br>
+                </div>
+                
+                <div>
+                    <!--Data table-->
+                    <table class="table-condensed" id="reminder" >
+                        <tr id="row0">
+                            <th width="100%">Note</th>
+                            <th>Date</th>
+                            <th id="st0">Status</th>
+                            <th class="text-center">Edit</th>
+                        </tr>
+                    </table>
+                     <!--End of Data table-->
+                     
+                     
+                    <!--Bootstrap popup modal-->
+                    <div class="modal fade" id="myModal" role="dialog">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title text-center">Notification</h4>
+                                </div>
+                                
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <div class="input-group date" data-provide="datepicker">
+                                                <input type="text" class="form-control" id="dateVal">
+                                                <div class="input-group-addon">
+                                                    <span class="glyphicon glyphicon-th"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <input type="checkbox" data-toggle="toggle" data-size="small" data-state="enabled" id="checkbox">
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <br>
+                                                <label >Reminder:</label>
+                                                <textarea class="form-control" rows="3" cols="100" id="comment" style="resize: none;resize: vertical;"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                
+                                <div class="modal-footer">
+                                    <button class="btn btn-primary" id="save" data-dismiss="modal">Save</button>
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal" id="exit">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End of Bootstrap popup modal-->
+                    
+                    
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+       
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.1/js/bootstrap-datepicker.min.js"></script>
+        <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        
+        <script src="edit.js"></script>
+        <script src="add.js"></script>
+		<script src="date_picker.js"></script>
+        
+        
+    </body>
+</html>
