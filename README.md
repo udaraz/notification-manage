@@ -1,4 +1,4 @@
-# Simple Notification Management System
+# Simple Notification Management App
 Simple Notification adder made using Jquery and bootstrap
 
 View Sample Here
